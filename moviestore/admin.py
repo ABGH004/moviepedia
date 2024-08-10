@@ -1,13 +1,13 @@
 from django.contrib import admin
-from .models import Movie, Director, Actor, Genre
 from django.utils.html import format_html
+from .models import Movie, Director, Actor, Genre
 
 
 # Register your models here.
 @admin.register(Movie)
 class MovieAdmin(admin.ModelAdmin):
     class Media:
-        css = {"all": ["store/styles.css"]}
+        css = {"all": ["moviestore/styles.css"]}
 
     autocomplete_fields = [
         "genre",

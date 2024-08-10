@@ -6,25 +6,25 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('movie', '0003_alter_actor_options_alter_director_options_and_more'),
+        ("moviestore", "0003_alter_actor_options_alter_director_options_and_more"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='actor',
+            name="actor",
             options={},
         ),
         migrations.AlterModelOptions(
-            name='director',
+            name="director",
             options={},
         ),
         migrations.AlterModelOptions(
-            name='genre',
+            name="genre",
             options={},
         ),
         migrations.AlterField(
-            model_name='movie',
-            name='genre',
-            field=models.ManyToManyField(related_name='genre', to='movie.genre'),
+            model_name="movie",
+            name="genre",
+            field=models.ManyToManyField(related_name="genre", to="moviestore.genre"),
         ),
     ]

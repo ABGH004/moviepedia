@@ -11,9 +11,9 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 import os
-from datetime import timedelta
-from pathlib import Path
 import environ
+from pathlib import Path
+from datetime import timedelta
 
 env = environ.Env()
 environ.Env().read_env()
@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "debug_toolbar",
     "djoser",
-    "movie",
+    "moviestore",
     "core",
 ]
 

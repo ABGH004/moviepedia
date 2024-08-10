@@ -26,7 +26,7 @@ admin.site.site_header = "Moviepedia Admin"
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("movie.urls")),
+    path("moviestore/", include("moviestore.urls")),
     path("__debug__/", include(debug_toolbar.urls)),
     path("auth/", include("djoser.urls")),
     path("auth/", include("djoser.urls.jwt")),

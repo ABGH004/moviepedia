@@ -1,11 +1,10 @@
-from django.shortcuts import render
 from rest_framework.viewsets import ModelViewSet
-from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.permissions import AllowAny, IsAdminUser
+from django_filters.rest_framework import DjangoFilterBackend
+from .models import Movie, Genre, Director, Actor
 from .filters import MovieFilter
 from .pagination import MoviePagination, GenreActorDirectorPagination
-from .models import Movie, Genre, Director, Actor
 from .serializers import (
     GetSimpleMovieSerializer,
     GetDetailedMovieSerializer,
@@ -14,8 +13,6 @@ from .serializers import (
     DirectorSerializer,
     ActorSerializer,
 )
-
-# Create your views here.
 
 
 class MovieViewSet(ModelViewSet):

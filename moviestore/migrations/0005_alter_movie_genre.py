@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('movie', '0004_alter_actor_options_alter_director_options_and_more'),
+        ("moviestore", "0004_alter_actor_options_alter_director_options_and_more"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='movie',
-            name='genre',
-            field=models.ManyToManyField(to='movie.genre'),
+            model_name="movie",
+            name="genre",
+            field=models.ManyToManyField(to="moviestore.genre"),
         ),
     ]

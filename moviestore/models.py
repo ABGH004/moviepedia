@@ -43,7 +43,7 @@ class Movie(models.Model):
     title = models.CharField(max_length=255)
 
     image = models.ImageField(
-        upload_to="movie/images",
+        upload_to="moviestore/images",
         blank=True,
         null=True,
         validators=[
@@ -66,7 +66,7 @@ class Movie(models.Model):
 
     genre = models.ManyToManyField(Genre)
 
-    # first 3 to 5 actors
+    # main actors(at most 5)
     actor = models.ManyToManyField(Actor)
 
     director = models.ManyToManyField(Director)
