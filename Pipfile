@@ -10,6 +10,8 @@ django-debug-toolbar = "*"
 djoser = "*"
 django-environ = "*"
 psycopg2 = "*"
+pillow = "*"
+django-filter = "*"
 
 [dev-packages]
 
